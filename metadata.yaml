@@ -1,0 +1,25 @@
+data:
+  allowedHosts:
+    hosts:
+      - TODO # Please change to the hostname of the source.
+  registries:
+    oss:
+      enabled: false
+    cloud:
+      enabled: false
+  connectorSubtype: api
+  connectorType: source
+  definitionId: d8d597a0-067a-4735-9743-e8317d4885ff
+  dockerImageTag: 0.1.0
+  dockerRepository: airbyte/source-football-data
+  githubIssueLabel: source-football-data
+  icon: football-data.svg
+  license: MIT
+  name: Football Data
+  releaseDate: TODO
+  supportLevel: community
+  releaseStage: alpha
+  documentationUrl: https://docs.airbyte.com/integrations/sources/football-data
+  tags:
+    - language:python
+metadataSpecVersion: "1.0"
