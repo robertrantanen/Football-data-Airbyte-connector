@@ -8,14 +8,11 @@ source_football_data/schemas
 sample_files/configured_catalog.json  
 
 In order to use the connector, there should be a file ```secrets/config.json``` with the content:  
-{"code": "competition_code", "apikey": "your_api_key"} 
+```{"code": "competition_code", "apikey": "your_api_key"}```
 
 Api key from https://www.football-data.org/
 
-Allowed competition codes:  
-"WC","CL","BL1","DED","BSA","PD","FL1","ELC","PPL","EC","SA","PL","CLI"  
-
-The folder ```example_results``` contains example output when running the connector with the Airbyte UI.
+The folder ```example_results``` contains example output when running the connector with the league code "PL" in the Airbyte UI.
 
 
 ## Default documentation
