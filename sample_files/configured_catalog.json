@@ -2,7 +2,27 @@
     "streams": [
       {
         "stream": {
-          "name": "football_competition",
+          "name": "football_competition_matches",
+          "json_schema": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "type": "object",
+            "properties": {
+              "access_key": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              }
+            }
+          },
+          "supported_sync_modes": ["full_refresh"]
+        },
+        "sync_mode": "full_refresh",
+        "destination_sync_mode": "overwrite"
+      },
+      {
+        "stream": {
+          "name": "football_competition_teams",
           "json_schema": {
             "$schema": "http://json-schema.org/draft-04/schema#",
             "type": "object",

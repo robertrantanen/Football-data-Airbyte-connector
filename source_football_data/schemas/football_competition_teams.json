@@ -1,0 +1,620 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "count": {
+        "type": "integer"
+      },
+      "filters": {
+        "type": "object",
+        "properties": {
+          "season": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "season"
+        ]
+      },
+      "competition": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "emblem": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "code",
+          "type",
+          "emblem"
+        ]
+      },
+      "season": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "startDate": {
+            "type": "string"
+          },
+          "endDate": {
+            "type": "string"
+          },
+          "currentMatchday": {
+            "type": "integer"
+          },
+          "winner": {
+            "type": "null"
+          },
+          "stages": {
+            "type": "array",
+            "items": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "startDate",
+          "endDate",
+          "currentMatchday",
+          "winner",
+          "stages"
+        ]
+      },
+      "teams": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "area": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "flag": {
+                    "type": "null"
+                  }
+                },
+                "required": [
+                  "id",
+                  "name",
+                  "code",
+                  "flag"
+                ]
+              },
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "shortName": {
+                "type": "string"
+              },
+              "tla": {
+                "type": "string"
+              },
+              "crest": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "website": {
+                "type": "string"
+              },
+              "founded": {
+                "type": "integer"
+              },
+              "clubColors": {
+                "type": "string"
+              },
+              "venue": {
+                "type": "string"
+              },
+              "runningCompetitions": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "code": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "type": "string"
+                      },
+                      "emblem": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "name",
+                      "code",
+                      "type",
+                      "emblem"
+                    ]
+                  }
+                ]
+              },
+              "coach": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "null"
+                  },
+                  "firstName": {
+                    "type": "null"
+                  },
+                  "lastName": {
+                    "type": "null"
+                  },
+                  "name": {
+                    "type": "null"
+                  },
+                  "dateOfBirth": {
+                    "type": "null"
+                  },
+                  "nationality": {
+                    "type": "null"
+                  },
+                  "contract": {
+                    "type": "object",
+                    "properties": {
+                      "start": {
+                        "type": "null"
+                      },
+                      "until": {
+                        "type": "null"
+                      }
+                    },
+                    "required": [
+                      "start",
+                      "until"
+                    ]
+                  }
+                },
+                "required": [
+                  "id",
+                  "firstName",
+                  "lastName",
+                  "name",
+                  "dateOfBirth",
+                  "nationality",
+                  "contract"
+                ]
+              },
+              "marketValue": {
+                "type": "null"
+              },
+              "squad": {
+                "type": "array",
+                "items": {}
+              },
+              "staff": {
+                "type": "array",
+                "items": {}
+              },
+              "lastUpdated": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "area",
+              "id",
+              "name",
+              "shortName",
+              "tla",
+              "crest",
+              "address",
+              "website",
+              "founded",
+              "clubColors",
+              "venue",
+              "runningCompetitions",
+              "coach",
+              "marketValue",
+              "squad",
+              "staff",
+              "lastUpdated"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "area": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "flag": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "name",
+                  "code",
+                  "flag"
+                ]
+              },
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "shortName": {
+                "type": "string"
+              },
+              "tla": {
+                "type": "string"
+              },
+              "crest": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "website": {
+                "type": "string"
+              },
+              "founded": {
+                "type": "integer"
+              },
+              "clubColors": {
+                "type": "string"
+              },
+              "venue": {
+                "type": "string"
+              },
+              "runningCompetitions": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "code": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "type": "string"
+                      },
+                      "emblem": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "name",
+                      "code",
+                      "type",
+                      "emblem"
+                    ]
+                  }
+                ]
+              },
+              "coach": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "null"
+                  },
+                  "firstName": {
+                    "type": "null"
+                  },
+                  "lastName": {
+                    "type": "null"
+                  },
+                  "name": {
+                    "type": "null"
+                  },
+                  "dateOfBirth": {
+                    "type": "null"
+                  },
+                  "nationality": {
+                    "type": "null"
+                  },
+                  "contract": {
+                    "type": "object",
+                    "properties": {
+                      "start": {
+                        "type": "null"
+                      },
+                      "until": {
+                        "type": "null"
+                      }
+                    },
+                    "required": [
+                      "start",
+                      "until"
+                    ]
+                  }
+                },
+                "required": [
+                  "id",
+                  "firstName",
+                  "lastName",
+                  "name",
+                  "dateOfBirth",
+                  "nationality",
+                  "contract"
+                ]
+              },
+              "marketValue": {
+                "type": "null"
+              },
+              "squad": {
+                "type": "array",
+                "items": {}
+              },
+              "staff": {
+                "type": "array",
+                "items": {}
+              },
+              "lastUpdated": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "area",
+              "id",
+              "name",
+              "shortName",
+              "tla",
+              "crest",
+              "address",
+              "website",
+              "founded",
+              "clubColors",
+              "venue",
+              "runningCompetitions",
+              "coach",
+              "marketValue",
+              "squad",
+              "staff",
+              "lastUpdated"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "area": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "flag": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "name",
+                  "code",
+                  "flag"
+                ]
+              },
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "shortName": {
+                "type": "string"
+              },
+              "tla": {
+                "type": "string"
+              },
+              "crest": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "website": {
+                "type": "string"
+              },
+              "founded": {
+                "type": "integer"
+              },
+              "clubColors": {
+                "type": "string"
+              },
+              "venue": {
+                "type": "string"
+              },
+              "runningCompetitions": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "code": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "type": "string"
+                      },
+                      "emblem": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "name",
+                      "code",
+                      "type",
+                      "emblem"
+                    ]
+                  }
+                ]
+              },
+              "coach": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "null"
+                  },
+                  "firstName": {
+                    "type": "null"
+                  },
+                  "lastName": {
+                    "type": "null"
+                  },
+                  "name": {
+                    "type": "null"
+                  },
+                  "dateOfBirth": {
+                    "type": "null"
+                  },
+                  "nationality": {
+                    "type": "null"
+                  },
+                  "contract": {
+                    "type": "object",
+                    "properties": {
+                      "start": {
+                        "type": "null"
+                      },
+                      "until": {
+                        "type": "null"
+                      }
+                    },
+                    "required": [
+                      "start",
+                      "until"
+                    ]
+                  }
+                },
+                "required": [
+                  "id",
+                  "firstName",
+                  "lastName",
+                  "name",
+                  "dateOfBirth",
+                  "nationality",
+                  "contract"
+                ]
+              },
+              "marketValue": {
+                "type": "null"
+              },
+              "squad": {
+                "type": "array",
+                "items": {}
+              },
+              "staff": {
+                "type": "array",
+                "items": {}
+              },
+              "lastUpdated": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "area",
+              "id",
+              "name",
+              "shortName",
+              "tla",
+              "crest",
+              "address",
+              "website",
+              "founded",
+              "clubColors",
+              "venue",
+              "runningCompetitions",
+              "coach",
+              "marketValue",
+              "squad",
+              "staff",
+              "lastUpdated"
+            ]
+          }
+        ]
+      }
+    },
+    "required": [
+      "count",
+      "filters",
+      "competition",
+      "season",
+      "teams"
+    ]
+}
