@@ -1,5 +1,25 @@
 # Football Data Source
 
+Created with Airbyte template generator. Relevant files:
+
+source_football_data/spec.yaml  
+source_football_data/source.py  
+source_football_data/schemas  
+sample_files/configured_catalog.json  
+
+In order to use the connector, there should be a file ```secrets/config.json``` with the content:  
+{"code": "competition_code", "apikey": "your_api_key"} 
+
+Api key from https://www.football-data.org/
+
+Allowed competition codes:  
+"WC","CL","BL1","DED","BSA","PD","FL1","ELC","PPL","EC","SA","PL","CLI"  
+
+The folder ```example_results``` contains example output when running the connector with the Airbyte UI.
+
+
+## Default documentation
+
 This is the repository for the Football Data source connector, written in Python.
 For information about how to use this connector within Airbyte, see [the documentation](https://docs.airbyte.com/integrations/sources/football-data).
 
