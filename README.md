@@ -12,7 +12,7 @@ In order to use the connector, there should be a file ```secrets/config.json``` 
 
 Api key from https://www.football-data.org/
 
-The folder ```example_results``` contains example output when running the connector with the league code "PL" in the Airbyte UI.
+The folder ```example_results``` contains example output when running the connector with the competition code "PL" in the Airbyte UI.
 
 
 ## Default documentation
