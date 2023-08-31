@@ -106,12 +106,13 @@ class FootballCompetitionTeams(HttpStream):
 
 class SourceFootballData(AbstractSource):
     def check_connection(self, logger, config) -> Tuple[bool, any]:
-        accepted_competitions = {"WC","CL","BL1","DED","BSA","PD","FL1","ELC","PPL","EC","SA","PL","CLI"}  
-        input_competition = config['code']
-        if input_competition not in accepted_competitions:
-            return False, f"Input competition {input_competition} is invalid. Please input one of the following competitions: {accepted_competitions}"
-        else:
+        try:
+            url = "http://api.football-data.org/v4/competitions/"+config['code']
+            session = requests.get(url, headers={'X-Auth-Token': config['apikey']})
+            session.raise_for_status()
             return True, None
+        except requests.exceptions.RequestException as e:
+            return False, e
 
     def streams(self, config: Mapping[str, Any]) -> List[Stream]:
         auth = NoAuth()  
