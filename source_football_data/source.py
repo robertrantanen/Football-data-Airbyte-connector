@@ -105,7 +105,6 @@ class FootballCompetitionTeams(HttpStream):
         
 
 class SourceFootballData(AbstractSource):
-    
     def check_connection(self, logger, config) -> Tuple[bool, any]:
         accepted_competitions = {"WC","CL","BL1","DED","BSA","PD","FL1","ELC","PPL","EC","SA","PL","CLI"}  
         input_competition = config['code']
